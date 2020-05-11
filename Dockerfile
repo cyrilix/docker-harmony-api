@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y wget
 
 WORKDIR /src
-RUN wget -O- https://github.com/maddox/harmony-api/archive/${HARMONY_API_VERSION}tar.gz | tar xz && \
+RUN wget -O- https://github.com/maddox/harmony-api/archive/${HARMONY_API_VERSION}.tar.gz | tar xz && \
     mv harmony-api-${HARMONY_API_VERSION} harmony-api
 
 RUN echo $PWD
